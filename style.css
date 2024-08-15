@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    font-family: 'PT Sans', sans-serif;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color:black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fig {
+    margin-top: 2em;
+    height: 600px;
+    width: 440px;
+}
+
+#ui {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+#profile, #projects, #freelance, #info {
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+}
+
+#name-svg path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+#tagline {
+    width: 250px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    align-self: center;
+}
+
+.pLink, .fLink, .iLink {
+    padding: 1px 0px;
+    margin: 2px 0px;
+}

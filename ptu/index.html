@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Token Transit</title>
+        <link rel="icon" type="image/x-icon" href="images/tt-logo.png">
+        <link rel="apple-touch-icon" type="image/icon" href="images/tt-logo.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+    </head>
+    <body>
+        <div class="agency">
+            <span style="display: inline-flex;">
+                    <img id="logo" src="images/nftaLogo.png" style="width: 20%; height: 50%; margin-top: 2%; margin-left: -2%"  >
+                <span class="text">
+                    <span id="name">NFTA Metro</span>
+                    <span id="instructions">Scan your ticket</span>
+                </span>
+            </span>
+            <span id="minimize">X</span>
+        </div>
+        <div class="validator">
+            <img src="media/qrcode.png" alt="NFTA QR code" width="575px" height="575px">
+        </div>
+        <div class="pass">
+            <span id="time"></span>
+            <span id="type">Day Bus+Rail</span>
+        </div>
+        <div class="ticket">
+            <span id="ticket-type">Adult Day Bus & Rail</span>
+            <span id="location">Buffalo, NY</span>
+            <br>
+            <span id="expiration"></span>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/isSameOrBefore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/localizedFormat.js"></script>
+    <script>dayjs.extend(window.dayjs_plugin_localizedFormat)</script>
+    <script>dayjs.extend(window.dayjs_plugin_isSameOrBefore)</script>
+    <script>
+
+        var time = document.getElementById('time')
+        var exp = document.getElementById('expiration')
+
+        function currentTime () {
+            const now = dayjs().format('LTS');
+            time.textContent = now;
+        }
+
+        setInterval(currentTime, 1000)
+
+        function expiry () {
+            const now = dayjs()
+            const expire = now.add(1, 'day')
+            if (now.isSameOrBefore(expire)) {
+                exp.textContent = "Expires " + expire.format('ll') + " at 4:00 AM"
+            } else {
+                exp.textContent = "Expires " + expire.format('ll') + " at 4:00 AM"
+            }
+        }
+
+        currentTime()
+        expiry()
+
+    </script> 
+</html>

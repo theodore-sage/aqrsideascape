@@ -1,0 +1,102 @@
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+        body, html {
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+            margin: 1em 2em;
+            color: #404040;
+        }
+
+        .agency {
+            display: flex;
+            .text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #logo img {
+                width: 20%;
+                height: 40%;
+            }
+
+            #name {
+                font-family: Arial, sans-serif;
+                font-size: 4.5em;
+                font-weight: 600;
+                margin-left: 30px;
+            }
+
+            #instructions {
+                font-family: Helvetica, sans-serif;
+                font-size: 3em;
+                font-weight: 400;
+                margin-left: 30px;
+            }
+
+            #minimize {
+                display: flex; 
+                justify-self: right; 
+                font-family: Arial, sans-serif; 
+                font-weight: 200; 
+                font-size: 3em
+            }
+        }
+
+        .validator {
+            display: flex;
+            align-self: center;
+            margin: 15em 0;
+        }
+
+        .pass {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            
+            #time {
+                font-size: 10em;
+                font-weight: 600;
+            }
+
+            #type {
+                width: 90%;
+                background-color: black;
+                text-align: center;
+                border-radius: 65px;
+                margin: 2rem 0;
+                padding: 1rem 3rem;
+                color: white;
+                font-size: 8em;
+                font-stretch: condensed;
+                font-weight: 400;
+            }
+        }
+
+        .ticket {
+            font-family: 'Helvetica', sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0.5em 0.5em #ADABAD;
+            padding: 2em;
+            margin: 2em 1em;
+
+            #ticket-type {
+                font-size: 5rem;
+                margin: 1rem 0;
+            }
+
+            #location {
+                font-size: 2.5rem;
+            }
+
+            #expiration {
+                margin: 4rem 0;
+                font-size: 2.75rem;
+                font-weight: 600;
+            }
+        }
+    }
